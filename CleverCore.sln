@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverCore.WebApp", "CleverCore.WebApp\CleverCore.WebApp.csproj", "{A5DB3705-DBE2-4880-9239-F47D26857DE7}"
 EndProject
@@ -26,6 +26,22 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverCore.Application.Dapper", "CleverCore.Application.Dapper\CleverCore.Application.Dapper.csproj", "{D278D187-3D13-4872-BB09-2F2F9A69E2FD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverCore.WebApi", "CleverCore.WebApi\CleverCore.WebApi.csproj", "{27171F34-3919-4F09-A7D7-6C6F9CAEFFC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{0AB9FE24-90AB-4A0B-AACF-B45125547D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.Utilities.Test", "CleverCore.Utilities.Test\CleverCore.Utilities.Test.csproj", "{F0658445-2F18-41B6-824C-E851CE85333C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.Infrastructure.Test", "CleverCore.Infrastructure.Test\CleverCore.Infrastructure.Test.csproj", "{E24E6CFC-80A2-490D-8055-5B9CCD779948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.Data.EF.Test", "CleverCore.Data.EF.Test\CleverCore.Data.EF.Test.csproj", "{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.Application.Dapper.Test", "CleverCore.Application.Dapper.Test\CleverCore.Application.Dapper.Test.csproj", "{73C58AFD-1AEB-4202-9430-B882D293FB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.Application.Test", "CleverCore.Application.Test\CleverCore.Application.Test.csproj", "{52BC7C55-FD17-4947-B205-D14CB2C26C24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.WebApp.Test", "CleverCore.WebApp.Test\CleverCore.WebApp.Test.csproj", "{88FE2613-7BED-4B53-BE04-640D757F70DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverCore.WebApi.Test", "CleverCore.WebApi.Test\CleverCore.WebApi.Test.csproj", "{467793DB-93F9-4AF2-A887-F0133491629A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +81,34 @@ Global
 		{27171F34-3919-4F09-A7D7-6C6F9CAEFFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27171F34-3919-4F09-A7D7-6C6F9CAEFFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27171F34-3919-4F09-A7D7-6C6F9CAEFFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0658445-2F18-41B6-824C-E851CE85333C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0658445-2F18-41B6-824C-E851CE85333C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0658445-2F18-41B6-824C-E851CE85333C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0658445-2F18-41B6-824C-E851CE85333C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24E6CFC-80A2-490D-8055-5B9CCD779948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24E6CFC-80A2-490D-8055-5B9CCD779948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24E6CFC-80A2-490D-8055-5B9CCD779948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24E6CFC-80A2-490D-8055-5B9CCD779948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C58AFD-1AEB-4202-9430-B882D293FB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C58AFD-1AEB-4202-9430-B882D293FB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C58AFD-1AEB-4202-9430-B882D293FB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C58AFD-1AEB-4202-9430-B882D293FB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BC7C55-FD17-4947-B205-D14CB2C26C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BC7C55-FD17-4947-B205-D14CB2C26C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BC7C55-FD17-4947-B205-D14CB2C26C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BC7C55-FD17-4947-B205-D14CB2C26C24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FE2613-7BED-4B53-BE04-640D757F70DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FE2613-7BED-4B53-BE04-640D757F70DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FE2613-7BED-4B53-BE04-640D757F70DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FE2613-7BED-4B53-BE04-640D757F70DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467793DB-93F9-4AF2-A887-F0133491629A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467793DB-93F9-4AF2-A887-F0133491629A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467793DB-93F9-4AF2-A887-F0133491629A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467793DB-93F9-4AF2-A887-F0133491629A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +122,13 @@ Global
 		{E429173E-743B-4368-AEBD-4A466095B475} = {844DB236-20AF-4F85-AC1F-A9A90BC3F6DC}
 		{D278D187-3D13-4872-BB09-2F2F9A69E2FD} = {844DB236-20AF-4F85-AC1F-A9A90BC3F6DC}
 		{27171F34-3919-4F09-A7D7-6C6F9CAEFFC0} = {9B9CE55E-D9E6-4C52-B697-C4FBAB581793}
+		{F0658445-2F18-41B6-824C-E851CE85333C} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{E24E6CFC-80A2-490D-8055-5B9CCD779948} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{21E4382B-00A8-4FF0-845A-C2B2B2E2DD4E} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{73C58AFD-1AEB-4202-9430-B882D293FB9A} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{52BC7C55-FD17-4947-B205-D14CB2C26C24} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{88FE2613-7BED-4B53-BE04-640D757F70DC} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
+		{467793DB-93F9-4AF2-A887-F0133491629A} = {0AB9FE24-90AB-4A0B-AACF-B45125547D87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD37A10-3F44-4006-96E9-0F63F1506ACC}
