@@ -34,7 +34,7 @@ namespace CleverCore.Utilities.Helpers
         }
         public static string ToString(decimal number)
         {
-            string s = number.ToString("#");
+            string s = number.ToString("#.##");
             string[] numberWords = new string[] { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
             string[] layer = new string[] { "", "nghìn", "triệu", "tỷ" };
             int i, j, unit, dozen, hundred;
@@ -105,7 +105,8 @@ namespace CleverCore.Utilities.Helpers
                 }
             }
             if (booAm) str = "Âm " + str;
-            return str + "đồng chẵn";
-        }
+            return Regex.Replace(str + "đồng chẵn", @"\s+", " ").Trim();
+        
+            }
     }
 }
