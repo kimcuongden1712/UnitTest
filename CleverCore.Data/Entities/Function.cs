@@ -1,15 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
 using CleverCore.Data.Interfaces;
 using CleverCore.Infrastructure.SharedKernel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleverCore.Data.Entities
 {
     [Table("Functions")]
     public class Function : DomainEntity<string>, ISwitchable, ISortable
     {
-       
         [Required]
         [MaxLength(128)]
         public string Name { set; get; }
@@ -17,7 +16,6 @@ namespace CleverCore.Data.Entities
         [Required]
         [MaxLength(250)]
         public string URL { set; get; }
-
 
         [MaxLength(128)]
         public string ParentId { set; get; }

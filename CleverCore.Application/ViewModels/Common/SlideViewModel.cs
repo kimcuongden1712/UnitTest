@@ -5,6 +5,7 @@ namespace CleverCore.Application.ViewModels.Common
     public class SlideViewModel
     {
         public int Id { get; set; }
+
         [StringLength(250)]
         [Required]
         public string Name { set; get; }

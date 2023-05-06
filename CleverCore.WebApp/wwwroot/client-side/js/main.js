@@ -1,6 +1,5 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
     "use strict";
-
 
     /******************************************
        Newsletter popup
@@ -17,23 +16,22 @@ jQuery(document).ready(function() {
         backdrop: false
     });
     /******************************************
-    	Mobile menu
+        Mobile menu
     ******************************************/
 
     jQuery("#mobile-menu").mobileMenu({
-            MenuWidth: 250,
-            SlideSpeed: 300,
-            WindowsMaxWidth: 767,
-            PagePush: !0,
-            FromLeft: !0,
-            Overlay: !0,
-            CollapseMenu: !0,
-            ClassName: "mobile-menu"
-
-        }),
+        MenuWidth: 250,
+        SlideSpeed: 300,
+        WindowsMaxWidth: 767,
+        PagePush: !0,
+        FromLeft: !0,
+        Overlay: !0,
+        CollapseMenu: !0,
+        ClassName: "mobile-menu"
+    }),
 
         /******************************************
-        	Our clients slider
+            Our clients slider
         ******************************************/
 
         jQuery("#our-clients-slider .slider-items").owlCarousel({
@@ -49,9 +47,9 @@ jQuery(document).ready(function() {
             autoPlay: true
         }),
 
- /******************************************
-           computer slider
-  ******************************************/
+        /******************************************
+                  computer slider
+         ******************************************/
 
         jQuery("#computer-slider .slider-items").owlCarousel({
             items: 4,
@@ -65,7 +63,7 @@ jQuery(document).ready(function() {
             pagination: !1,
             autoPlay: false
         }),
-		
+
         /******************************************
           smartphone slider
         ******************************************/
@@ -83,9 +81,8 @@ jQuery(document).ready(function() {
             autoPlay: false
         }),
 
-
         /******************************************
-        	watches slider
+            watches slider
         ******************************************/
 
         jQuery("#watches-slider .slider-items").owlCarousel({
@@ -102,7 +99,7 @@ jQuery(document).ready(function() {
         }),
 
         /******************************************
-        	daily deal slider
+            daily deal slider
         ******************************************/
 
         jQuery("#daily-deal-slider .slider-items").owlCarousel({
@@ -117,9 +114,9 @@ jQuery(document).ready(function() {
             pagination: !1,
             autoPlay: true
         }),
-		
-		/******************************************
-        	Photo slider
+
+        /******************************************
+            Photo slider
         ******************************************/
 
         jQuery("#photo-slider .slider-items").owlCarousel({
@@ -136,7 +133,7 @@ jQuery(document).ready(function() {
         }),
 
         /******************************************
-        	best sale slider
+            best sale slider
         ******************************************/
         jQuery("#jtv-best-sale-slider .slider-items").owlCarousel({
             items: 4, //10 items above 1000px browser width
@@ -149,41 +146,40 @@ jQuery(document).ready(function() {
             pagination: false,
             autoPlay: true
         });
-        /******************************************
-        	toprate products slider
-        ******************************************/
-        jQuery("#toprate-products-slider .slider-items").owlCarousel({
-             items: 1, //10 items above 1000px browser width
-            itemsDesktop: [1024, 1], //5 items between 1024px and 901px
-            itemsDesktopSmall: [900, 2], // 3 items betweem 900px and 601px
-            itemsTablet: [767, 1], //2 items between 600 and 0;
-            itemsMobile: [360, 1],
-            navigation: false,
-            navigationText: ["<a class=\"flex-prev\"></a>", "<a class=\"flex-next\"></a>"],
-            slideSpeed: 500,
-            pagination: true
-        });
+    /******************************************
+        toprate products slider
+    ******************************************/
+    jQuery("#toprate-products-slider .slider-items").owlCarousel({
+        items: 1, //10 items above 1000px browser width
+        itemsDesktop: [1024, 1], //5 items between 1024px and 901px
+        itemsDesktopSmall: [900, 2], // 3 items betweem 900px and 601px
+        itemsTablet: [767, 1], //2 items between 600 and 0;
+        itemsMobile: [360, 1],
+        navigation: false,
+        navigationText: ["<a class=\"flex-prev\"></a>", "<a class=\"flex-next\"></a>"],
+        slideSpeed: 500,
+        pagination: true
+    });
 
     /******************************************
-    	Special products slider
+        Special products slider
     ******************************************/
 
     jQuery("#special-products-slider .slider-items").owlCarousel({
-            items: 3,
-            itemsDesktop: [1024, 3],
-            itemsDesktopSmall: [900, 2],
-            itemsTablet: [640, 2],
-            itemsMobile: [390, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1,
-            autoPlay: false
-        }),
-
+        items: 3,
+        itemsDesktop: [1024, 3],
+        itemsDesktopSmall: [900, 2],
+        itemsTablet: [640, 2],
+        itemsMobile: [390, 1],
+        navigation: !0,
+        navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+        slideSpeed: 500,
+        pagination: !1,
+        autoPlay: false
+    }),
 
         /******************************************
-        	on sale produc slider
+            on sale produc slider
         ******************************************/
 
         jQuery("#new-products-slider .slider-items").owlCarousel({
@@ -199,24 +195,24 @@ jQuery(document).ready(function() {
         });
 
     /******************************************
-    	Latest news slider
+        Latest news slider
     ******************************************/
 
     jQuery("#latest-news-slider .slider-items").owlCarousel({
-            autoplay: !0,
-            items: 4,
-            itemsDesktop: [1024, 3],
-            itemsDesktopSmall: [900, 2],
-            itemsTablet: [640, 1],
-            itemsMobile: [480, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1,
-            transitionStyle: "backSlide"
-        }),
+        autoplay: !0,
+        items: 4,
+        itemsDesktop: [1024, 3],
+        itemsDesktopSmall: [900, 2],
+        itemsTablet: [640, 1],
+        itemsMobile: [480, 1],
+        navigation: !0,
+        navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+        slideSpeed: 500,
+        pagination: !1,
+        transitionStyle: "backSlide"
+    }),
         /******************************************
-        	testimonials slider
+            testimonials slider
         ******************************************/
 
         jQuery("#testimonials-slider .slider-items").owlCarousel({
@@ -234,10 +230,10 @@ jQuery(document).ready(function() {
         }),
 
         /******************************************
-        	Mega Menu
+            Mega Menu
         ******************************************/
 
-        jQuery('.mega-menu-title').on('click', function() {
+        jQuery('.mega-menu-title').on('click', function () {
             if (jQuery('.mega-menu-category').is(':visible')) {
                 jQuery('.mega-menu-category').slideUp();
             } else {
@@ -245,17 +241,15 @@ jQuery(document).ready(function() {
             }
         });
 
-
-    jQuery('.mega-menu-category .nav > li').hover(function() {
+    jQuery('.mega-menu-category .nav > li').hover(function () {
         jQuery(this).addClass("active");
         jQuery(this).find('.popup').stop(true, true).fadeIn('slow');
-    }, function() {
+    }, function () {
         jQuery(this).removeClass("active");
         jQuery(this).find('.popup').stop(true, true).fadeOut('slow');
     });
 
-
-    jQuery('.mega-menu-category .nav > li.view-more').on('click', function(e) {
+    jQuery('.mega-menu-category .nav > li.view-more').on('click', function (e) {
         if (jQuery('.mega-menu-category .nav > li.more-menu').is(':visible')) {
             jQuery('.mega-menu-category .nav > li.more-menu').stop().slideUp();
             jQuery(this).find('a').text('More category');
@@ -287,20 +281,20 @@ jQuery(document).ready(function() {
     ******************************************/
 
     jQuery("#upsell-product-slider .slider-items").owlCarousel({
-            items: 4,
-            itemsDesktop: [1024, 4],
-            itemsDesktopSmall: [900, 3],
-            itemsTablet: [640, 2],
-            itemsMobile: [390, 1],
-            navigation: !0,
-            navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
-            slideSpeed: 500,
-            pagination: !1,
-            autoPlay: false
-        }),
+        items: 4,
+        itemsDesktop: [1024, 4],
+        itemsDesktopSmall: [900, 3],
+        itemsTablet: [640, 2],
+        itemsMobile: [390, 1],
+        navigation: !0,
+        navigationText: ['<a class="flex-prev"></a>', '<a class="flex-next"></a>'],
+        slideSpeed: 500,
+        pagination: !1,
+        autoPlay: false
+    }),
 
         /******************************************
-        	Related product slider
+            Related product slider
         ******************************************/
 
         jQuery("#related-product-slider .slider-items").owlCarousel({
@@ -317,7 +311,7 @@ jQuery(document).ready(function() {
         }),
 
         /******************************************
-        	Related posts
+            Related posts
         ******************************************/
 
         jQuery("#related-posts .slider-items").owlCarousel({
@@ -333,12 +327,11 @@ jQuery(document).ready(function() {
             autoPlay: true
         }),
 
-
         /******************************************
             PRICE FILTER
         ******************************************/
 
-        jQuery('.slider-range-price').each(function() {
+        jQuery('.slider-range-price').each(function () {
             var min = jQuery(this).data('min');
             var max = jQuery(this).data('max');
             var unit = jQuery(this).data('unit');
@@ -351,7 +344,7 @@ jQuery(document).ready(function() {
                 min: min,
                 max: max,
                 values: [value_min, value_max],
-                slide: function(event, ui) {
+                slide: function (event, ui) {
                     var result = label_reasult + " " + unit + ui.values[0] + ' - ' + unit + ui.values[1];
                     console.log(t);
                     t.closest('.slider-range').find('.amount-range-price').html(result);
@@ -363,7 +356,7 @@ jQuery(document).ready(function() {
         Footer expander
     ******************************************/
 
-    jQuery(".collapsed-block .expander").on("click", function(e) {
+    jQuery(".collapsed-block .expander").on("click", function (e) {
         var collapse_content_selector = jQuery(this).attr("href");
         var expander = jQuery(this);
         if (!jQuery(collapse_content_selector).hasClass("open")) expander.addClass("open").html("&minus;");
@@ -377,11 +370,11 @@ jQuery(document).ready(function() {
         Category sidebar
     ******************************************/
 
-    jQuery(function() {
+    jQuery(function () {
         jQuery(".category-sidebar ul > li.cat-item.cat-parent > ul").hide();
         jQuery(".category-sidebar ul > li.cat-item.cat-parent.current-cat-parent > ul").show();
         jQuery(".category-sidebar ul > li.cat-item.cat-parent.current-cat.cat-parent > ul").show();
-        jQuery(".category-sidebar ul > li.cat-item.cat-parent").on("click", function() {
+        jQuery(".category-sidebar ul > li.cat-item.cat-parent").on("click", function () {
             if (jQuery(this).hasClass('current-cat-parent')) {
                 var li = jQuery(this).closest('li');
                 li.find(' > ul').slideToggle('fast');
@@ -392,7 +385,7 @@ jQuery(document).ready(function() {
                 jQuery(this).toggleClass("cat-item.cat-parent open-cat");
             }
         });
-        jQuery(".category-sidebar ul.children li.cat-item,ul.children li.cat-item > a").on("click", function(e) {
+        jQuery(".category-sidebar ul.children li.cat-item,ul.children li.cat-item > a").on("click", function (e) {
             e.stopPropagation();
         });
     });
@@ -401,26 +394,25 @@ jQuery(document).ready(function() {
         colosebut
     ******************************************/
 
-    jQuery("#colosebut1").on("click", function() {
+    jQuery("#colosebut1").on("click", function () {
         jQuery("#div1").fadeOut("slow");
     });
-    jQuery("#colosebut2").on("click", function() {
+    jQuery("#colosebut2").on("click", function () {
         jQuery("#div2").fadeOut("slow");
     });
-    jQuery("#colosebut3").on("click", function() {
+    jQuery("#colosebut3").on("click", function () {
         jQuery("#div3").fadeOut("slow");
     });
-    jQuery("#colosebut4").on("click", function() {
+    jQuery("#colosebut4").on("click", function () {
         jQuery("#div4").fadeOut("slow");
     });
-
 
     /******************************************
         totop
     ******************************************/
     if (jQuery('#back-to-top').length) {
         var scrollTrigger = 100, // px
-            backToTop = function() {
+            backToTop = function () {
                 var scrollTop = jQuery(window).scrollTop();
                 if (scrollTop > scrollTrigger) {
                     jQuery('#back-to-top').addClass('show');
@@ -429,10 +421,10 @@ jQuery(document).ready(function() {
                 }
             };
         backToTop();
-        jQuery(window).on('scroll', function() {
+        jQuery(window).on('scroll', function () {
             backToTop();
         });
-        jQuery('#back-to-top').on('click', function(e) {
+        jQuery('#back-to-top').on('click', function (e) {
             e.preventDefault();
             jQuery('html,body').animate({
                 scrollTop: 0
@@ -442,7 +434,6 @@ jQuery(document).ready(function() {
     /******************************************
         tooltip
     ******************************************/
-
 
     jQuery('[data-toggle="tooltip"]').tooltip();
 
@@ -456,8 +447,4 @@ jQuery(document).ready(function() {
             textInterval: 3000
         });
     }
-
 })
-
-
-

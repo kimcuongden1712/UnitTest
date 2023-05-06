@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Product;
+﻿using CleverCore.Application.ViewModels.Product;
 using CleverCore.Utilities.Dtos;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace CleverCore.WebApp.Models.ProductViewModels
 {

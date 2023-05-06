@@ -19,6 +19,7 @@ namespace CleverCore.Data.EF
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
+
         public DbSet<Language> Languages { set; get; }
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Function> Functions { get; set; }
@@ -49,7 +50,6 @@ namespace CleverCore.Data.EF
 
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<WholePrice> WholePrices { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

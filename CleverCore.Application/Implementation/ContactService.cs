@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Common;
 using CleverCore.Data.Entities;
 using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {

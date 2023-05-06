@@ -1,12 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Infrastructure.SharedKernel;
+﻿using CleverCore.Infrastructure.SharedKernel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleverCore.Data.Entities
 {
     [Table("WholePrices")]
     public class WholePrice : DomainEntity<int>
     {
-        
         public int ProductId { get; set; }
 
         public int FromQuantity { get; set; }

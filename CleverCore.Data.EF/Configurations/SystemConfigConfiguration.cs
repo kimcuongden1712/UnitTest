@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CleverCore.Data.EF.Configurations
 {
-    class SystemConfigConfiguration : DbEntityConfiguration<SystemConfig>
+    internal class SystemConfigConfiguration : DbEntityConfiguration<SystemConfig>
     {
         public override void Configure(EntityTypeBuilder<SystemConfig> entity)
         {

@@ -1,5 +1,5 @@
-﻿using System;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
+using System;
 
 namespace CleverCore.Application.ViewModels.Common
 {

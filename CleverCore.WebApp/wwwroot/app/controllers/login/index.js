@@ -24,7 +24,6 @@
                 var password = $('#txtPassword').val();
                 login(user, password);
             }
-           
         });
     }
 

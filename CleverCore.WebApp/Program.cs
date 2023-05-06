@@ -1,9 +1,9 @@
-﻿using System;
-using CleverCore.Data.EF;
+﻿using CleverCore.Data.EF;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace CleverCore.WebApp
 {
@@ -12,7 +12,7 @@ namespace CleverCore.WebApp
         public static void Main(string[] args)
         {
             var host = CreateWebHostBuilder(args).Build();
-            using(var scope = host.Services.CreateScope())
+            using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
 

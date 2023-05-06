@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using CleverCore.WebApp.Extensions;
 using CleverCore.WebApp.Models.ManageViewModels;
 using CleverCore.WebApp.Services;
@@ -12,6 +7,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
+using System.Text;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Controllers
 {
@@ -499,6 +499,6 @@ namespace CleverCore.WebApp.Controllers
                 unformattedKey);
         }
 
-        #endregion
+        #endregion Helpers
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Blog;
@@ -11,6 +9,8 @@ using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Constants;
 using CleverCore.Utilities.Dtos;
 using CleverCore.Utilities.Helpers;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {

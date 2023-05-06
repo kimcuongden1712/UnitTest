@@ -38,7 +38,6 @@
                 success: function (path) {
                     $('#txtImage').val(path);
                     tedu.notify('Upload image succesful!', 'success');
-
                 },
                 error: function () {
                     tedu.notify('There was error uploading files!', 'error');
@@ -71,14 +70,13 @@
                     $('#txtSeoPageTitleM').val(data.SeoPageTitle);
                     $('#txtSeoAliasM').val(data.SeoAlias);
 
-                    $('#ckStatusM').prop('checked', data.Status ==1);
+                    $('#ckStatusM').prop('checked', data.Status == 1);
                     $('#ckShowHomeM').prop('checked', data.HomeFlag);
                     $('#txtOrderM').val(data.SortOrder);
                     $('#txtHomeOrderM').val(data.HomeOrder);
 
                     $('#modal-add-edit').modal('show');
                     tedu.stopLoading();
-
                 },
                 error: function (status) {
                     tedu.notify('Có lỗi xảy ra', 'error');
@@ -169,7 +167,6 @@
                 });
             }
             return false;
-
         });
     }
     function resetFormMaintainance() {
@@ -229,7 +226,6 @@
                         parentId: item.ParentId,
                         sortOrder: item.SortOrder
                     });
-
                 });
                 var treeArr = tedu.unflattern(data);
                 treeArr.sort(function (a, b) {
@@ -296,7 +292,6 @@
                         }
                     }
                 });
-
             }
         });
     }

@@ -1,7 +1,7 @@
-﻿using System;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.WebApp.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -13,6 +13,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         {
             _announcementService = announcementService;
         }
+
         [HttpGet]
         public IActionResult GetAllPaging(int page, int pageSize)
         {

@@ -1,21 +1,19 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using CleverCore.Data.Interfaces;
+using CleverCore.Infrastructure.SharedKernel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
-using CleverCore.Data.Interfaces;
-using CleverCore.Infrastructure.SharedKernel;
 
 namespace CleverCore.Data.Entities
 {
     [Table("Blogs")]
     public class Blog : DomainEntity<int>, ISwitchable, IDateTracking, IHasSeoMetaData
     {
-        
         [Required]
         [MaxLength(256)]
         public string Name { set; get; }
-
 
         [MaxLength(256)]
         public string Image { set; get; }

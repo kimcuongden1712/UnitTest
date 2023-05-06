@@ -1,15 +1,15 @@
 ﻿var CartController = function () {
-   var cachedObj = {
+    var cachedObj = {
         colors: [],
         sizes: [],
     }
     this.initialize = function () {
-    $.when(loadColors(),
+        $.when(loadColors(),
             loadSizes())
-    .then(function(){
-            loadData();
+            .then(function () {
+                loadData();
             });
-      
+
         registerEvents();
     }
 
@@ -51,7 +51,6 @@
             } else {
                 tedu.notify('Your quantity is invalid', 'error');
             }
-
         });
 
         $('body').on('change', '.ddlColorId', function (e) {
@@ -68,8 +67,8 @@
                     data: {
                         productId: id,
                         quantity: q,
-                        color:colorId,
-                        size:sizeId
+                        color: colorId,
+                        size: sizeId
                     },
                     success: function () {
                         tedu.notify('Update quantity is successful', 'success');
@@ -80,7 +79,6 @@
             } else {
                 tedu.notify('Your quantity is invalid', 'error');
             }
-
         });
 
         $('body').on('change', '.ddlSizeId', function (e) {
@@ -96,8 +94,8 @@
                     data: {
                         productId: id,
                         quantity: q,
-                        color:colorId,
-                        size:sizeId
+                        color: colorId,
+                        size: sizeId
                     },
                     success: function () {
                         tedu.notify('Update quantity is successful', 'success');
@@ -108,7 +106,6 @@
             } else {
                 tedu.notify('Your quantity is invalid', 'error');
             }
-
         });
         $('#btnClearAll').on('click', function (e) {
             e.preventDefault();
@@ -193,8 +190,8 @@
                             Image: item.Product.Image,
                             Price: tedu.formatNumber(item.Price, 0),
                             Quantity: item.Quantity,
-                            Colors: getColorOptions(item.Color == null? 0: item.Color.Id),
-                            Sizes:getSizeOptions(item.Size == null? "": item.Size.Id),
+                            Colors: getColorOptions(item.Color == null ? 0 : item.Color.Id),
+                            Sizes: getSizeOptions(item.Size == null ? "" : item.Size.Id),
                             Amount: tedu.formatNumber(item.Price * item.Quantity, 0),
                             Url: '/' + item.Product.SeoAlias + "-p." + item.Product.Id + ".html"
                         });

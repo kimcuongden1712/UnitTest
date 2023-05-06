@@ -8,6 +8,5 @@ namespace CleverCore.WebApi.Controllers
     [Produces("application/json")]
     public class ApiController : Controller
     {
-       
     }
 }

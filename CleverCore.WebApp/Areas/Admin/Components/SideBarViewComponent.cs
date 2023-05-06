@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
 using CleverCore.Utilities.Constants;
 using CleverCore.WebApp.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Components
 {

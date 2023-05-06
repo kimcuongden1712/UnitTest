@@ -1,7 +1,7 @@
-﻿using System.Net;
+﻿using Microsoft.Extensions.Configuration;
+using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 
 namespace CleverCore.WebApp.Services
 {
@@ -13,6 +13,7 @@ namespace CleverCore.WebApp.Services
         {
             _configuration = configuration;
         }
+
         public Task SendEmailAsync(string email, string subject, string message)
         {
             SmtpClient client = new SmtpClient(_configuration["MailSettings:Server"])

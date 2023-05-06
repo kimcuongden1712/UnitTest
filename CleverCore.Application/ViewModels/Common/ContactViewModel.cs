@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleverCore.Application.ViewModels.Common
 {
     public class ContactViewModel
     {
         public string Id { set; get; }
+
         [StringLength(250)]
         [Required]
         public string Name { set; get; }

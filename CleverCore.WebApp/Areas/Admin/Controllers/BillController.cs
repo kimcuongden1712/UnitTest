@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Common;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Data.Enums;
@@ -12,6 +8,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OfficeOpenXml;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -19,6 +19,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
     {
         private readonly IBillService _billService;
         private readonly IHostingEnvironment _hostingEnvironment;
+
         public BillController(IBillService billService, IHostingEnvironment hostingEnvironment)
         {
             _billService = billService;
@@ -37,6 +38,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
 
             return new OkObjectResult(model);
         }
+
         [HttpGet]
         public IActionResult UpdateStatus(int billId, BillStatus status)
         {
@@ -44,12 +46,14 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
 
             return new OkResult();
         }
+
         [HttpGet]
         public IActionResult GetAllPaging(string startDate, string endDate, string keyword, int page, int pageSize)
         {
             var model = _billService.GetAllPaging(startDate, endDate, keyword, page, pageSize);
             return new OkObjectResult(model);
         }
+
         [HttpPost]
         public IActionResult SaveEntity(BillViewModel billVm)
         {
@@ -69,6 +73,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             _billService.Save();
             return new OkObjectResult(billVm);
         }
+
         [HttpGet]
         public IActionResult GetPaymentMethod()
         {
@@ -106,6 +111,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             var sizes = _billService.GetSizes();
             return new OkObjectResult(sizes);
         }
+
         [HttpPost]
         public IActionResult ExportExcel(int billId)
         {
@@ -162,7 +168,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                     worksheet.Cells[26, 1].Value = numberWord;
                     var billDate = billDetail.DateCreated;
                     worksheet.Cells[28, 3].Value = billDate.Day + ", " + billDate.Month + ", " + billDate.Year;
-
 
                     package.SaveAs(file); //Save the workbook.
                 }

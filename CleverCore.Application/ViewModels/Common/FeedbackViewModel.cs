@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using System;
 using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
 
 namespace CleverCore.Application.ViewModels.Common
 {
     public class FeedbackViewModel
     {
         public int Id { set; get; }
+
         [StringLength(250)]
         [Required]
         public string Name { set; get; }

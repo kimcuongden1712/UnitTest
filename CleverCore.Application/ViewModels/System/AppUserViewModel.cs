@@ -1,6 +1,6 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using System;
 using System.Collections.Generic;
-using CleverCore.Data.Enums;
 
 namespace CleverCore.Application.ViewModels.System
 {
@@ -10,6 +10,7 @@ namespace CleverCore.Application.ViewModels.System
         {
             Roles = new List<string>();
         }
+
         public Guid? Id { set; get; }
         public string FullName { set; get; }
         public string BirthDay { set; get; }

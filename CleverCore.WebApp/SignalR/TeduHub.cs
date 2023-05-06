@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Application.ViewModels.System;
+﻿using CleverCore.Application.ViewModels.System;
 using Microsoft.AspNetCore.SignalR;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.SignalR
 {

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CleverCore.Infrastructure.Interfaces;
+using CleverCore.Infrastructure.SharedKernel;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using CleverCore.Infrastructure.Interfaces;
-using CleverCore.Infrastructure.SharedKernel;
-using Microsoft.EntityFrameworkCore;
 
 namespace CleverCore.Data.EF
 {

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Blog;
+﻿using CleverCore.Application.ViewModels.Blog;
 using CleverCore.Application.ViewModels.Common;
 using CleverCore.Application.ViewModels.Product;
+using System.Collections.Generic;
 
 namespace CleverCore.WebApp.Models
 {

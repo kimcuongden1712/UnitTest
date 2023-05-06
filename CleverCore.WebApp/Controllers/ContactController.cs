@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Utilities.Constants;
 using CleverCore.WebApp.Models;
 using CleverCore.WebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Controllers
 {
@@ -27,6 +27,7 @@ namespace CleverCore.WebApp.Controllers
             _configuration = configuration;
             _viewRenderService = viewRenderService;
         }
+
         [Route("contact.html")]
         [HttpGet]
         public IActionResult Index()

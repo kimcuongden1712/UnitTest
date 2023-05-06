@@ -18,6 +18,7 @@ namespace CleverCore.Application.Dapper.Implementation
         {
             _configuration = configuration;
         }
+
         public async Task<IEnumerable<RevenueReportViewModel>> GetReportAsync(string fromDate, string toDate)
         {
             using (SqlConnection sqlConnection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
@@ -32,10 +33,8 @@ namespace CleverCore.Application.Dapper.Implementation
                 dynamicParameters.Add("@fromDate", string.IsNullOrEmpty(fromDate) ? firstDayOfMonth.ToString("MM/dd/yyyy") : fromDate);
                 dynamicParameters.Add("@toDate", string.IsNullOrEmpty(toDate) ? lastDayOfMonth.ToString("MM/dd/yyyy") : toDate);
 
-
                 return await sqlConnection.QueryAsync<RevenueReportViewModel>(
                     "GetRevenueDaily", dynamicParameters, commandType: CommandType.StoredProcedure);
-
             }
         }
     }

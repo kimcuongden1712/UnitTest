@@ -1,20 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
+using SkiaSharp;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Logging;
-using SkiaSharp;
 
 namespace CleverCore.WebApp.Middleware
 {
     public class ImageResizerMiddleware
     {
-        struct ResizeParams
+        private struct ResizeParams
         {
             public bool hasParams;
             public int w;
@@ -103,7 +103,6 @@ namespace CleverCore.WebApp.Middleware
 
             // cleanup
             imageData.Dispose();
-
         }
 
         private SKData GetImageData(string imagePath, ResizeParams resizeParams, DateTime lastWriteTimeUtc)
@@ -253,14 +252,11 @@ namespace CleverCore.WebApp.Middleware
                         for (var y = 0; y < original.Height; y++)
                             bitmap.SetPixel(original.Width - 1 - x, y, original.GetPixel(x, y));
                     break;
-
             }
 
             original.Dispose();
 
             return bitmap;
-
-
         }
 
         private SKBitmap LoadBitmap(Stream stream, out SKCodecOrigin origin)

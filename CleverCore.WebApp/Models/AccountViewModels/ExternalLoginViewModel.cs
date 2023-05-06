@@ -12,6 +12,5 @@ namespace CleverCore.WebApp.Models.AccountViewModels
 
         [Required]
         public string PhoneNumber { get; set; }
-
     }
 }

@@ -43,5 +43,4 @@
     function loadHeaderCart() {
         $("#headerCart").load("/AjaxContent/HeaderCart");
     }
-
 }

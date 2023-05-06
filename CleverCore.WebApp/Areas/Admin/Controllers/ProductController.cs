@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http.Headers;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Utilities.Helpers;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Http.Headers;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -21,7 +21,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         private readonly IProductCategoryService _productCategoryService;
         private readonly IHostingEnvironment _hostingEnvironment;
 
-        public ProductController(IProductService productService, 
+        public ProductController(IProductService productService,
             IProductCategoryService productCategoryService,
             IHostingEnvironment hostingEnvironment)
         {
@@ -105,6 +105,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                 return new OkObjectResult(id);
             }
         }
+
         [HttpPost]
         public IActionResult SaveQuantities(int productId, List<ProductQuantityViewModel> quantities)
         {
@@ -119,6 +120,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             var quantities = _productService.GetQuantities(productId);
             return new OkObjectResult(quantities);
         }
+
         [HttpPost]
         public IActionResult SaveImages(int productId, string[] images)
         {
@@ -148,6 +150,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             var wholePrices = _productService.GetWholePrices(productId);
             return new OkObjectResult(wholePrices);
         }
+
         [HttpPost]
         public IActionResult ImportExcel(IList<IFormFile> files, int categoryId)
         {
@@ -177,6 +180,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             }
             return new NoContentResult();
         }
+
         [HttpPost]
         public IActionResult ExportExcel()
         {
@@ -205,6 +209,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             }
             return new OkObjectResult(fileUrl);
         }
+
         #endregion AJAX API
     }
 }

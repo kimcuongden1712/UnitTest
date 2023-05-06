@@ -1,18 +1,19 @@
-﻿using System.Linq;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.WebApp.Models.ProductViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
+using System.Linq;
 
 namespace CleverCore.WebApp.Controllers
 {
     public class ProductController : Controller
     {
-        readonly IProductService _productService;
-        readonly IBillService _billService;
-        readonly IProductCategoryService _productCategoryService;
-        readonly IConfiguration _configuration;
+        private readonly IProductService _productService;
+        private readonly IBillService _billService;
+        private readonly IProductCategoryService _productCategoryService;
+        private readonly IConfiguration _configuration;
+
         public ProductController(IProductService productService, IConfiguration configuration,
             IBillService billService,
             IProductCategoryService productCategoryService)
@@ -22,6 +23,7 @@ namespace CleverCore.WebApp.Controllers
             _configuration = configuration;
             _billService = billService;
         }
+
         [Route("products.html")]
         public IActionResult Index()
         {
@@ -44,7 +46,6 @@ namespace CleverCore.WebApp.Controllers
 
             return View(catalog);
         }
-
 
         [Route("search.html")]
         public IActionResult Search(string keyword, int? pageSize, string sortBy, int page = 1)
@@ -86,6 +87,5 @@ namespace CleverCore.WebApp.Controllers
 
             return View(model);
         }
-
     }
 }

@@ -1,14 +1,13 @@
-﻿using System;
+﻿using CleverCore.Infrastructure.SharedKernel;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Infrastructure.SharedKernel;
 
 namespace CleverCore.Data.Entities
 {
     [Table("Permissions")]
     public class Permission : DomainEntity<int>
     {
-      
         [Required]
         public Guid RoleId { get; set; }
 
@@ -21,7 +20,6 @@ namespace CleverCore.Data.Entities
 
         public bool CanUpdate { set; get; }
         public bool CanDelete { set; get; }
-
 
         [ForeignKey("RoleId")]
         public virtual AppRole AppRole { get; set; }

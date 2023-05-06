@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleverCore.Application.ViewModels.Blog
 {
     public class PageViewModel
     {
         public int Id { set; get; }
+
         [Required]
         [MaxLength(256)]
         public string Name { set; get; }

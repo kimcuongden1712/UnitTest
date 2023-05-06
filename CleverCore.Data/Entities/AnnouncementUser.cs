@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CleverCore.Infrastructure.SharedKernel;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Infrastructure.SharedKernel;
 
 namespace CleverCore.Data.Entities
 {
@@ -18,5 +18,4 @@ namespace CleverCore.Data.Entities
         [ForeignKey("AnnouncementId")]
         public virtual Announcement Announcement { get; set; }
     }
-    
 }

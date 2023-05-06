@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Product;
+﻿using CleverCore.Application.ViewModels.Product;
 using CleverCore.Data.Enums;
 using CleverCore.Utilities.Dtos;
+using System.Collections.Generic;
 
 namespace CleverCore.Application.Interfaces
 {
     public interface IBillService
     {
         void Create(BillViewModel billVm);
+
         void Update(BillViewModel billVm);
 
         PagedResult<BillViewModel> GetAllPaging(string startDate, string endDate, string keyword,

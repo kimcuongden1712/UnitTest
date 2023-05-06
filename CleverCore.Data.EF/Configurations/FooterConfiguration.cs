@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CleverCore.Data.EF.Configurations
 {
-   public class FooterConfiguration : DbEntityConfiguration<Footer>
+    public class FooterConfiguration : DbEntityConfiguration<Footer>
     {
         public override void Configure(EntityTypeBuilder<Footer> entity)
         {

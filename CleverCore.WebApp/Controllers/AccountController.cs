@@ -1,7 +1,4 @@
-﻿using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using CleverCore.Data.Enums;
 using CleverCore.WebApp.Extensions;
 using CleverCore.WebApp.Models.AccountViewModels;
@@ -12,6 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Controllers
 {
@@ -226,13 +226,14 @@ namespace CleverCore.WebApp.Controllers
                 return View(model);
             }
             //MM/dd/yyy
-            var user = new AppUser {
+            var user = new AppUser
+            {
                 UserName = model.Email,
                 Email = model.Email,
                 FullName = model.FullName,
                 PhoneNumber = model.PhoneNumber,
-                BirthDay  = model.BirthDay,
-                Status= Status.Active,
+                BirthDay = model.BirthDay,
+                Status = Status.Active,
                 Avatar = string.Empty
             };
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -306,7 +307,7 @@ namespace CleverCore.WebApp.Controllers
                 ViewData["ReturnUrl"] = returnUrl;
                 ViewData["LoginProvider"] = info.LoginProvider;
                 var email = info.Principal.FindFirstValue(ClaimTypes.Email);
-                return View("ExternalLogin", new ExternalLoginViewModel ());
+                return View("ExternalLogin", new ExternalLoginViewModel());
             }
         }
 
@@ -325,7 +326,8 @@ namespace CleverCore.WebApp.Controllers
                 }
                 var email = info.Principal.FindFirstValue(ClaimTypes.Email);
 
-                var user = new AppUser {
+                var user = new AppUser
+                {
                     UserName = email,
                     Email = email,
                     FullName = model.FullName,
@@ -451,7 +453,6 @@ namespace CleverCore.WebApp.Controllers
             return View();
         }
 
-
         [HttpGet]
         public IActionResult AccessDenied()
         {
@@ -480,6 +481,6 @@ namespace CleverCore.WebApp.Controllers
             }
         }
 
-        #endregion
+        #endregion Helpers
     }
 }

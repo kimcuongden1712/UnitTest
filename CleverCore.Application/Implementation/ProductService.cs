@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Common;
@@ -14,6 +10,10 @@ using CleverCore.Utilities.Constants;
 using CleverCore.Utilities.Dtos;
 using CleverCore.Utilities.Helpers;
 using OfficeOpenXml;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {

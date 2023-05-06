@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using CleverCore.Data.Enums;
 using CleverCore.Utilities.Constants;
 using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CleverCore.Data.EF
 {
@@ -14,6 +14,7 @@ namespace CleverCore.Data.EF
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<AppRole> _roleManager;
+
         public DbInitializer(AppDbContext context, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _context = context;
@@ -64,7 +65,7 @@ namespace CleverCore.Data.EF
                 _context.Contacts.Add(new Contact()
                 {
                     Id = CommonConstants.DefaultContactId,
-                    Address ="No 36 Lane 133 Nguyen Phong Sac Cau Giay",
+                    Address = "No 36 Lane 133 Nguyen Phong Sac Cau Giay",
                     Email = "pandashop@gmail.com",
                     Name = "Panda Shop",
                     Phone = "0942 324 543",
@@ -131,7 +132,6 @@ namespace CleverCore.Data.EF
                 };
                 _context.Colors.AddRange(listColor);
             }
-          
 
             if (!_context.Slides.Any())
             {
@@ -155,7 +155,6 @@ namespace CleverCore.Data.EF
                 };
                 _context.Slides.AddRange(slides);
             }
-
 
             if (!_context.Sizes.Any())
             {
@@ -247,7 +246,6 @@ namespace CleverCore.Data.EF
                 });
             }
             await _context.SaveChangesAsync();
-
         }
     }
 }

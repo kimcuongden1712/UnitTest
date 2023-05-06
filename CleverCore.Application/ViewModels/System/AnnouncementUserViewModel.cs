@@ -14,6 +14,5 @@ namespace CleverCore.Application.ViewModels.System
         public Guid UserId { get; set; }
 
         public bool? HasRead { get; set; }
-
     }
 }

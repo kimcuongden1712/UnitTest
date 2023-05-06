@@ -11,10 +11,11 @@ namespace CleverCore.Utilities.Dtos
             get
             {
                 var pageCount = (double)RowCount / PageSize;
-                return (int)Math.Ceiling(pageCount); 
+                return (int)Math.Ceiling(pageCount);
             }
             set { PageCount = value; }
         }
+
         public int PageSize { get; set; }
 
         public int RowCount { get; set; }
@@ -26,6 +27,7 @@ namespace CleverCore.Utilities.Dtos
                 return (CurrentPage - 1) * PageSize + 1;
             }
         }
+
         public int LastRowOnPage
         {
             get

@@ -62,7 +62,6 @@
             hideArrowsOnMobile: 'off',
             hideThumbsUnderResolution: 0,
 
-
             hideSliderAtLimit: 0,
             hideCaptionAtLimit: 0,
             hideAllCaptionAtLilmit: 0,

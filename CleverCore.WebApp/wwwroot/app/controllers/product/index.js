@@ -49,7 +49,6 @@
             resetFormMaintainance();
             initTreeDropDownCategory();
             $('#modal-add-edit').modal('show');
-
         });
 
         $('#btnSelectImg').on('click', function () {
@@ -72,7 +71,6 @@
                 success: function (path) {
                     $('#txtImage').val(path);
                     tedu.notify('Upload image succesful!', 'success');
-
                 },
                 error: function () {
                     tedu.notify('There was error uploading files!', 'error');
@@ -105,13 +103,13 @@
             var fileUpload = $("#fileInputExcel").get(0);
             var files = fileUpload.files;
 
-            // Create FormData object  
+            // Create FormData object
             var fileData = new FormData();
-            // Looping over all files and add it to FormData object  
+            // Looping over all files and add it to FormData object
             for (var i = 0; i < files.length; i++) {
                 fileData.append("files", files[i]);
             }
-            // Adding one more key to FormData object  
+            // Adding one more key to FormData object
             fileData.append('categoryId', $('#ddlCategoryIdImportExcel').combotree('getValue'));
             $.ajax({
                 url: '/Admin/Product/ImportExcel',
@@ -122,7 +120,6 @@
                 success: function (data) {
                     $('#modal-import-excel').modal('hide');
                     loadData();
-
                 }
             });
             return false;
@@ -165,7 +162,6 @@
                     }
                 }, this));
         };
-
     }
 
     function saveProduct(e) {
@@ -299,7 +295,6 @@
 
                 $('#modal-add-edit').modal('show');
                 tedu.stopLoading();
-
             },
             error: function (status) {
                 tedu.notify('Có lỗi xảy ra', 'error');
@@ -363,7 +358,6 @@
         $('#ckStatusM').prop('checked', true);
         $('#ckHotM').prop('checked', false);
         $('#ckShowHomeM').prop('checked', false);
-
     }
 
     function loadCategories() {
@@ -410,7 +404,6 @@
                         CreatedDate: tedu.dateTimeFormatJson(item.DateCreated),
                         Status: tedu.getStatus(item.Status)
                     });
-                    
                 });
                 $('#lblTotalRecords').text(response.RowCount);
                 if (render != '') {

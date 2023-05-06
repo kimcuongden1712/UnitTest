@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
 
 namespace CleverCore.Application.ViewModels.Product
 {

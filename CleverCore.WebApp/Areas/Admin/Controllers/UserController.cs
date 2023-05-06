@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
 using CleverCore.Data.Enums;
 using CleverCore.WebApp.Authorization;
@@ -12,6 +8,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -21,7 +21,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         private readonly IAuthorizationService _authorizationService;
         private readonly IHubContext<TeduHub> _hubContext;
 
-
         public UserController(IUserService userService,
             IAuthorizationService authorizationService,
             IHubContext<TeduHub> hubContext)
@@ -30,6 +29,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             _authorizationService = authorizationService;
             _hubContext = hubContext;
         }
+
         public async Task<IActionResult> Index()
         {
             var result = await _authorizationService.AuthorizeAsync(User, "USER", Operations.Read);
@@ -38,6 +38,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
 
             return View();
         }
+
         public IActionResult GetAll()
         {
             var model = _userService.GetAllAsync();
@@ -78,7 +79,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                     Title = "User created",
                     UserId = User.GetUserId(),
                     Id = Guid.NewGuid().ToString(),
-                    
                 };
                 await _userService.AddAsync(userVm);
                 await _hubContext.Clients.All.SendAsync("ReceiveMessage", announcement);

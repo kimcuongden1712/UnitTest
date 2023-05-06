@@ -1,11 +1,11 @@
-﻿using System;
-using System.Diagnostics;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.WebApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System;
+using System.Diagnostics;
 
 namespace CleverCore.WebApp.Controllers
 {

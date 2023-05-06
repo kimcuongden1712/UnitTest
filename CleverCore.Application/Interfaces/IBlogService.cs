@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Blog;
+﻿using CleverCore.Application.ViewModels.Blog;
 using CleverCore.Application.ViewModels.Common;
 using CleverCore.Utilities.Dtos;
+using System.Collections.Generic;
 
 namespace CleverCore.Application.Interfaces
 {

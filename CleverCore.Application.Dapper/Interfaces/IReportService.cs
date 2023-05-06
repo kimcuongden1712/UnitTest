@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using CleverCore.Application.Dapper.ViewModels;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using CleverCore.Application.Dapper.ViewModels;
 
 namespace CleverCore.Application.Dapper.Interfaces
 {

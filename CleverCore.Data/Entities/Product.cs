@@ -1,18 +1,17 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using CleverCore.Data.Interfaces;
+using CleverCore.Infrastructure.SharedKernel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
-using CleverCore.Data.Interfaces;
-using CleverCore.Infrastructure.SharedKernel;
 
 namespace CleverCore.Data.Entities
 {
     [Table("Products")]
     public class Product : DomainEntity<int>, ISwitchable, IDateTracking, IHasSeoMetaData
     {
-        
         [MaxLength(255)]
         [Required]
         public string Name { get; set; }
@@ -54,20 +53,20 @@ namespace CleverCore.Data.Entities
 
         public virtual ICollection<ProductTag> ProductTags { set; get; }
 
-        public string SeoPageTitle {set;get;}
+        public string SeoPageTitle { set; get; }
 
         [MaxLength(255)]
-        public string SeoAlias {set;get;}
+        public string SeoAlias { set; get; }
 
         [MaxLength(255)]
-        public string SeoKeywords {set;get;}
+        public string SeoKeywords { set; get; }
 
         [MaxLength(255)]
-        public string SeoDescription {set;get;}
+        public string SeoDescription { set; get; }
 
-        public DateTime DateCreated {set;get;}
-        public DateTime DateModified {set;get;}
+        public DateTime DateCreated { set; get; }
+        public DateTime DateModified { set; get; }
 
-        public Status Status {set;get;}
+        public Status Status { set; get; }
     }
 }
