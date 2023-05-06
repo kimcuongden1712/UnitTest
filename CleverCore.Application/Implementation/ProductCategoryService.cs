@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Data.Entities;
 using CleverCore.Data.Enums;
 using CleverCore.Infrastructure.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {

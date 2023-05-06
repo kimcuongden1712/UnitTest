@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
@@ -11,6 +7,10 @@ using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Dtos;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CleverCore.Application.Implementation
 {

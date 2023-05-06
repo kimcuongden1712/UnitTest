@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {

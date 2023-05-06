@@ -1,6 +1,6 @@
-using System;
 using CleverCore.WebApp.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace CleverCore.WebApp.Extensions
 {

@@ -1,6 +1,6 @@
-﻿using System;
-using CleverCore.Application.ViewModels.System;
+﻿using CleverCore.Application.ViewModels.System;
 using CleverCore.Utilities.Dtos;
+using System;
 
 namespace CleverCore.Application.Interfaces
 {

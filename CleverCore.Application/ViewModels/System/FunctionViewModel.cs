@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleverCore.Application.ViewModels.System
 {
     public class FunctionViewModel
     {
         public string Id { get; set; }
+
         [Required]
         [StringLength(128)]
         public string Name { set; get; }
@@ -13,7 +14,6 @@ namespace CleverCore.Application.ViewModels.System
         [Required]
         [StringLength(250)]
         public string URL { set; get; }
-
 
         [StringLength(128)]
         public string ParentId { set; get; }

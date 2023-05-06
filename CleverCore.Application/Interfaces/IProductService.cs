@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Common;
+﻿using CleverCore.Application.ViewModels.Common;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Utilities.Dtos;
+using System;
+using System.Collections.Generic;
 
 namespace CleverCore.Application.Interfaces
 {
@@ -22,7 +22,6 @@ namespace CleverCore.Application.Interfaces
 
         void ImportExcel(string filePath, int categoryId);
 
-
         void Save();
 
         void AddQuantity(int productId, List<ProductQuantityViewModel> quantities);
@@ -40,6 +39,7 @@ namespace CleverCore.Application.Interfaces
         List<ProductViewModel> GetLastest(int top);
 
         List<ProductViewModel> GetHotProduct(int top);
+
         List<ProductViewModel> GetRelatedProducts(int id, int top);
 
         List<ProductViewModel> GetUpsellProducts(int top);
@@ -47,9 +47,5 @@ namespace CleverCore.Application.Interfaces
         List<TagViewModel> GetProductTags(int productId);
 
         bool CheckAvailability(int productId, int size, int color);
-
-        
-
-
     }
 }

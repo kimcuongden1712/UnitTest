@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
 using CleverCore.WebApp.Extensions;
 using CleverCore.WebApp.SignalR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -22,6 +22,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             _roleService = roleService;
             _hubContext = hubContext;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -33,6 +34,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
 
             return new OkObjectResult(model);
         }
+
         [HttpGet]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -71,10 +73,9 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                 {
                     new AnnouncementUserViewModel(){AnnouncementId = notificationId,HasRead = false,UserId = User.GetUserId()}
                 };
-                await _roleService.AddAsync(announcement, announcementUsers,roleVm );
+                await _roleService.AddAsync(announcement, announcementUsers, roleVm);
 
                 await _hubContext.Clients.All.SendAsync("ReceiveMessage", announcement);
-
             }
             else
             {
@@ -93,7 +94,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             await _roleService.DeleteAsync(id);
             return new OkObjectResult(id);
         }
-
 
         [HttpPost]
         public IActionResult ListAllFunction(Guid roleId)

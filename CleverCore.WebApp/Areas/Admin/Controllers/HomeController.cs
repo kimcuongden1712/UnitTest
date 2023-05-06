@@ -1,11 +1,10 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Application.Dapper.Interfaces;
+﻿using CleverCore.Application.Dapper.Interfaces;
 using CleverCore.WebApp.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
- 
     public class HomeController : BaseController
     {
         private readonly IReportService _reportService;

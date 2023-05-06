@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
 
 namespace CleverCore.Application.ViewModels.Product
 {
@@ -45,7 +45,7 @@ namespace CleverCore.Application.ViewModels.Product
         [StringLength(255)]
         public string Unit { get; set; }
 
-        public  ProductCategoryViewModel ProductCategory { set; get; }
+        public ProductCategoryViewModel ProductCategory { set; get; }
 
         public string SeoPageTitle { set; get; }
 

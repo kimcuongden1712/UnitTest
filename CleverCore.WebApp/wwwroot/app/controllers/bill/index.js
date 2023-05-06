@@ -102,7 +102,6 @@
                     }
                     $('#modal-detail').modal('show');
                     tedu.stopLoading();
-
                 },
                 error: function (e) {
                     tedu.notify('Has an error in progress', 'error');
@@ -170,7 +169,6 @@
                 });
                 return false;
             }
-
         });
 
         $('#btnAddDetail').on('click', function () {
@@ -207,7 +205,6 @@
                     window.location.href = response;
 
                     tedu.stopLoading();
-
                 }
             });
         });
@@ -366,13 +363,10 @@
                     $("#lbl-total-records").text(response.RowCount);
                     if (render != undefined) {
                         $('#tbl-content').html(render);
-
                     }
                     wrapPaging(response.RowCount, function () {
                         loadData();
                     }, isPageChanged);
-
-
                 }
                 else {
                     $("#lbl-total-records").text('0');

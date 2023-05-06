@@ -1,17 +1,17 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using CleverCore.Data.Enums;
 
 namespace CleverCore.Application.ViewModels.Blog
 {
     public class BlogViewModel
     {
         public int Id { set; get; }
+
         [Required]
         [MaxLength(256)]
         public string Name { set; get; }
-
 
         [MaxLength(256)]
         public string Image { set; get; }
@@ -27,7 +27,7 @@ namespace CleverCore.Application.ViewModels.Blog
 
         public string Tags { get; set; }
 
-        public  List<BlogTagViewModel> BlogTags { set; get; }
+        public List<BlogTagViewModel> BlogTags { set; get; }
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
         public Status Status { set; get; }

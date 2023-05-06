@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using CleverCore.Application.ViewModels.System;
+﻿using CleverCore.Application.ViewModels.System;
 using CleverCore.Utilities.Dtos;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CleverCore.Application.Interfaces
 {
@@ -16,7 +16,6 @@ namespace CleverCore.Application.Interfaces
         PagedResult<AppUserViewModel> GetAllPagingAsync(string keyword, int page, int pageSize);
 
         Task<AppUserViewModel> GetById(string id);
-
 
         Task UpdateAsync(AppUserViewModel userVm);
     }

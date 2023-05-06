@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Infrastructure.SharedKernel;
+﻿using CleverCore.Infrastructure.SharedKernel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleverCore.Data.Entities
 {
@@ -7,7 +7,6 @@ namespace CleverCore.Data.Entities
     public class BlogTag : DomainEntity<int>
     {
         public int BlogId { set; get; }
-
 
         public string TagId { set; get; }
 

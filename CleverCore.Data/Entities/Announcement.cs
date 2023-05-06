@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CleverCore.Data.Enums;
+using CleverCore.Data.Interfaces;
+using CleverCore.Infrastructure.SharedKernel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
-using CleverCore.Data.Interfaces;
-using CleverCore.Infrastructure.SharedKernel;
 
 namespace CleverCore.Data.Entities
 {

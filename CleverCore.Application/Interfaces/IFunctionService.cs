@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CleverCore.Application.ViewModels.System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CleverCore.Application.ViewModels.System;
 
 namespace CleverCore.Application.Interfaces
 {

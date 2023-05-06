@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Utilities.Dtos;
+﻿using CleverCore.Utilities.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Controllers.Components
 {

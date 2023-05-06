@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using CleverCore.Application.ViewModels.Blog;
+﻿using CleverCore.Application.ViewModels.Blog;
 using CleverCore.Utilities.Dtos;
+using System;
+using System.Collections.Generic;
 
 namespace CleverCore.Application.Interfaces
 {
@@ -22,6 +22,5 @@ namespace CleverCore.Application.Interfaces
         PageViewModel GetById(int id);
 
         void SaveChanges();
-
     }
 }

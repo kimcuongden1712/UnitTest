@@ -1,11 +1,11 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using CleverCore.Utilities.Dtos;
 using CleverCore.WebApp.Models.AccountViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -16,14 +16,14 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly ILogger _logger;
 
-
-        public LoginController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager
-            ,ILogger<LoginController> logger)
+        public LoginController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager
+            , ILogger<LoginController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -58,6 +58,5 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             // If we got this far, something failed, redisplay form
             return new ObjectResult(new GenericResult(false, model));
         }
-
     }
 }

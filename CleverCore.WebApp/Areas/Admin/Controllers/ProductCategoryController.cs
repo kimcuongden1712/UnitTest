@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Utilities.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
     public class ProductCategoryController : BaseController
     {
-        readonly IProductCategoryService _productCategoryService;
+        private readonly IProductCategoryService _productCategoryService;
+
         public ProductCategoryController(IProductCategoryService productCategoryService)
         {
             _productCategoryService = productCategoryService;
@@ -22,6 +23,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         }
 
         #region Get Data API
+
         [HttpGet]
         public IActionResult GetById(int id)
         {
@@ -29,6 +31,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
 
             return new ObjectResult(model);
         }
+
         [HttpPost]
         public IActionResult SaveEntity(ProductCategoryViewModel productVm)
         {
@@ -50,7 +53,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                 }
                 _productCategoryService.Save();
                 return new OkObjectResult(productVm);
-
             }
         }
 
@@ -68,6 +70,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                 return new OkObjectResult(id);
             }
         }
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -119,6 +122,6 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
             }
         }
 
-        #endregion
+        #endregion Get Data API
     }
 }

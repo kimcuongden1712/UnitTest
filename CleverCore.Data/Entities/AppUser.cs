@@ -1,8 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
 using CleverCore.Data.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleverCore.Data.Entities
 {

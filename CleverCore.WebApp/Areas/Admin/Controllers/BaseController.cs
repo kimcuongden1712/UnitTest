@@ -7,6 +7,5 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
     [Authorize]
     public class BaseController : Controller
     {
-        
     }
 }

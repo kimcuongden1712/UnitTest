@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using CleverCore.Data.Enums;
+﻿using CleverCore.Data.Enums;
 using CleverCore.Data.Interfaces;
 using CleverCore.Infrastructure.SharedKernel;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleverCore.Data.Entities
 {
@@ -11,7 +11,6 @@ namespace CleverCore.Data.Entities
     public class ProductCategory : DomainEntity<int>,
         IHasSeoMetaData, ISwitchable, ISortable, IDateTracking
     {
-        
         public string Name { get; set; }
 
         public string Description { get; set; }

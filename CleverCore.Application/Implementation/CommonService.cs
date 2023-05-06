@@ -1,21 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Common;
 using CleverCore.Data.Entities;
 using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Constants;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {
     public class CommonService : ICommonService
     {
-        readonly IRepository<Footer, string> _footerRepository;
-        readonly IRepository<SystemConfig, string> _systemConfigRepository;
-        IUnitOfWork _unitOfWork;
-        readonly IRepository<Slide, int> _slideRepository;
+        private readonly IRepository<Footer, string> _footerRepository;
+        private readonly IRepository<SystemConfig, string> _systemConfigRepository;
+        private IUnitOfWork _unitOfWork;
+        private readonly IRepository<Slide, int> _slideRepository;
+
         public CommonService(IRepository<Footer, string> footerRepository,
             IRepository<SystemConfig, string> systemConfigRepository,
             IUnitOfWork unitOfWork,

@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using CleverCore.Infrastructure.SharedKernel;
+﻿using CleverCore.Infrastructure.SharedKernel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleverCore.Data.Entities
 {

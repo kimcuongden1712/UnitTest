@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json.Serialization;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
 
 namespace CleverCore.WebApi
 {
@@ -46,17 +47,17 @@ namespace CleverCore.WebApi
 
             services.AddMvc().
                 AddJsonOptions(options =>
-                options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+                options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1", new Info
+                s.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
                     Title = "TEDU Project",
                     Description = "TEDU API Swagger surface",
-                    Contact = new Contact { Name = "ToanBN", Email = "tedu.international@gmail.com", Url = "http://www.tedu.com.vn" },
-                    License = new License { Name = "MIT", Url = "https://github.com/teduinternational/teducoreapp" }
+                    Contact = new OpenApiContact { Name = "AnhTT", Email = "anhtt.coder@gmail.com", Url = new Uri("https://google.com")},
+                    License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://google.com") }
                 });
             });
         }

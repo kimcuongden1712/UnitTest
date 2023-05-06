@@ -11,7 +11,7 @@ namespace CleverCore.Utilities.Test.Dtos
             var genericResult = new GenericResult();
             Assert.NotNull(genericResult);
         }
-        
+
         [Fact]
         public void Constructor_SuccessIsTrue_OneParam()
         {

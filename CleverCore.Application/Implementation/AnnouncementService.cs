@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using AutoMapper.QueryableExtensions;
+﻿using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
 using CleverCore.Data.Entities;
 using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Dtos;
+using System;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {
@@ -72,7 +72,6 @@ namespace CleverCore.Application.Implementation
                     announ.HasRead = true;
                     result = true;
                 }
-
             }
             return result;
         }

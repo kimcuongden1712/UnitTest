@@ -18,7 +18,6 @@ namespace CleverCore.Utilities.Test.Dtos
         {
             var result = new PagedResult<Array>();
             Assert.NotNull(result.Results);
-
         }
     }
 }

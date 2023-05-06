@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Product;
@@ -10,18 +6,21 @@ using CleverCore.Data.Entities;
 using CleverCore.Data.Enums;
 using CleverCore.Infrastructure.Interfaces;
 using CleverCore.Utilities.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace CleverCore.Application.Implementation
 {
     public class BillService : IBillService
     {
-        private readonly IRepository<Bill,int> _orderRepository;
+        private readonly IRepository<Bill, int> _orderRepository;
         private readonly IRepository<BillDetail, int> _orderDetailRepository;
         private readonly IRepository<Color, int> _colorRepository;
         private readonly IRepository<Size, int> _sizeRepository;
         private readonly IRepository<Product, int> _productRepository;
         private readonly IUnitOfWork _unitOfWork;
-
 
         public BillService(IRepository<Bill, int> orderRepository,
             IRepository<BillDetail, int> orderDetailRepository,

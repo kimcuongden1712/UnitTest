@@ -1,14 +1,14 @@
-﻿using System.Security.Claims;
-using System.Threading.Tasks;
-using CleverCore.Data.Entities;
+﻿using CleverCore.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Helpers
 {
     public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<AppUser, AppRole>
     {
-        readonly UserManager<AppUser> _userManger;
+        private readonly UserManager<AppUser> _userManger;
 
         public CustomClaimsPrincipalFactory(UserManager<AppUser> userManager,
             RoleManager<AppRole> roleManager, IOptions<IdentityOptions> options)
@@ -17,13 +17,13 @@ namespace CleverCore.WebApp.Helpers
             _userManger = userManager;
         }
 
-        public async override Task<ClaimsPrincipal> CreateAsync(AppUser user)
+        public override async Task<ClaimsPrincipal> CreateAsync(AppUser user)
         {
             var principal = await base.CreateAsync(user);
             var roles = await _userManger.GetRolesAsync(user);
             ((ClaimsIdentity)principal.Identity).AddClaims(new[]
             {
-                new Claim(ClaimTypes.NameIdentifier,user.UserName), 
+                new Claim(ClaimTypes.NameIdentifier,user.UserName),
                 new Claim("Email",user.Email),
                 new Claim("FullName",user.FullName),
                 new Claim("Avatar",user.Avatar??string.Empty),

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Areas.Admin.Controllers
 {
@@ -13,7 +13,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         #region Initialize
 
         private readonly IFunctionService _functionService;
-        
+
         public FunctionController(IFunctionService functionService)
         {
             this._functionService = functionService;
@@ -140,6 +140,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
         }
 
         #region Private Functions
+
         private void GetByParentId(IEnumerable<FunctionViewModel> allFunctions,
             FunctionViewModel parent, IList<FunctionViewModel> items)
         {
@@ -153,6 +154,7 @@ namespace CleverCore.WebApp.Areas.Admin.Controllers
                 GetByParentId(functionsEntities, cat, items);
             }
         }
-        #endregion
+
+        #endregion Private Functions
     }
 }

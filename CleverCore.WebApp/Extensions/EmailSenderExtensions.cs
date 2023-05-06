@@ -1,6 +1,6 @@
+using CleverCore.WebApp.Services;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using CleverCore.WebApp.Services;
 
 namespace CleverCore.WebApp.Extensions
 {

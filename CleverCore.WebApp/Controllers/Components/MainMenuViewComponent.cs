@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CleverCore.WebApp.Controllers.Components
 {
     public class MainMenuViewComponent : ViewComponent
     {
-
         private readonly IProductCategoryService _productCategoryService;
 
         public MainMenuViewComponent(IProductCategoryService productCategoryService)

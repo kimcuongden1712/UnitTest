@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using CleverCore.Application.Interfaces;
+﻿using CleverCore.Application.Interfaces;
 using CleverCore.Application.ViewModels.Product;
 using CleverCore.Data.Enums;
 using CleverCore.Utilities.Constants;
@@ -10,6 +7,9 @@ using CleverCore.WebApp.Models;
 using CleverCore.WebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CleverCore.WebApp.Controllers
 {

@@ -32,6 +32,7 @@ namespace CleverCore.Utilities.Helpers
             }
             return str2;
         }
+
         public static string ToString(decimal number)
         {
             string s = number.ToString("#.##");
@@ -106,7 +107,6 @@ namespace CleverCore.Utilities.Helpers
             }
             if (booAm) str = "Âm " + str;
             return Regex.Replace(str + "đồng chẵn", @"\s+", " ").Trim();
-        
-            }
+        }
     }
 }

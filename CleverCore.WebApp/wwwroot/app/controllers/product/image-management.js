@@ -39,7 +39,6 @@
                     images.push(path);
                     $('#image-list').append('<div class="col-md-3"><img width="100"  data-path="' + path + '" src="' + path + '"></div>');
                     tedu.notify('Đã tải ảnh lên thành công!', 'success');
-
                 },
                 error: function () {
                     tedu.notify('There was error uploading files!', 'error');

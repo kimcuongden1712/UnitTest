@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using AutoMapper;
+﻿using AutoMapper;
 using CleverCore.Application.Dapper.Implementation;
 using CleverCore.Application.Dapper.Interfaces;
 using CleverCore.Application.Implementation;
@@ -26,8 +23,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json.Serialization;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace CleverCore.WebApp
 {
@@ -92,7 +91,8 @@ namespace CleverCore.WebApp
                     facebookOpts.AppId = Configuration["Authentication:Facebook:AppId"];
                     facebookOpts.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
                 })
-                .AddGoogle(googleOpts=> {
+                .AddGoogle(googleOpts =>
+                {
                     googleOpts.ClientId = Configuration["Authentication:Google:ClientId"];
                     googleOpts.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
                 });
@@ -127,7 +127,7 @@ namespace CleverCore.WebApp
                     LanguageViewLocationExpanderFormat.Suffix,
                     opts => { opts.ResourcesPath = "Resources"; })
                 .AddDataAnnotationsLocalization()
-                .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+                .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
 
@@ -150,10 +150,10 @@ namespace CleverCore.WebApp
                   };
 
                   opts.DefaultRequestCulture = new RequestCulture("en-US");
-                   // Formatting numbers, dates, etc.
-                   opts.SupportedCultures = supportedCultures;
-                   // UI strings that we have localized.
-                   opts.SupportedUICultures = supportedCultures;
+                  // Formatting numbers, dates, etc.
+                  opts.SupportedCultures = supportedCultures;
+                  // UI strings that we have localized.
+                  opts.SupportedUICultures = supportedCultures;
               });
 
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
@@ -176,7 +176,6 @@ namespace CleverCore.WebApp
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             services.AddSignalR();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -201,7 +200,7 @@ namespace CleverCore.WebApp
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(options.Value);
             app.UseCors("CorsPolicy");
-            app.UseSignalR(routes =>
+            app.UseEndpoints(routes =>
             {
                 routes.MapHub<TeduHub>("/teduHub");
             });
@@ -213,10 +212,7 @@ namespace CleverCore.WebApp
 
                 routes.MapRoute(name: "areaRoute",
                     template: "{area:exists}/{controller=Login}/{action=Index}/{id?}");
-
-
             });
-
         }
     }
 }

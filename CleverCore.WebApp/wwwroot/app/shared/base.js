@@ -1,5 +1,4 @@
 ﻿var BaseController = function () {
-
     this.initialize = function () {
         loadAnnouncement();
         registerEvents();
@@ -24,7 +23,6 @@
                     $('#txtDescription').val(data.Description);
                     $('#modal-add-edit').modal('show');
                     tedu.stopLoading();
-
                 },
                 error: function (status) {
                     tedu.notify('Có lỗi xảy ra', 'error');
@@ -32,8 +30,6 @@
                 }
             });
         });
-
-      
     };
 
     function loadAnnouncement() {
@@ -59,7 +55,7 @@
                             Id: item.Id,
                             Title: item.Title,
                             FullName: item.FullName,
-                            Avatar:item.Avatar
+                            Avatar: item.Avatar
                         });
                     });
                     render += $('#announcement-tag-template').html();
@@ -79,6 +75,4 @@
             }
         });
     };
-
-    
 }

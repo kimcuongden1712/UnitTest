@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
-using System.IO.Compression;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
+using System.IO.Compression;
 using WebMarkupMin.AspNet.Common.Compressors;
 using WebMarkupMin.AspNetCore2;
 using WebMarkupMin.NUglify;
 
 namespace CleverCore.WebApp.Extensions
 {
-    public  static class MinResponseExtensions
+    public static class MinResponseExtensions
     {
         /// <summary>
-        ///     Add service to mini and compress HTML, XML, CSS, JS 
+        ///     Add service to mini and compress HTML, XML, CSS, JS
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>

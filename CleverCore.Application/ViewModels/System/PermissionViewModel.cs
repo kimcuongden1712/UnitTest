@@ -6,7 +6,6 @@ namespace CleverCore.Application.ViewModels.System
     {
         public int Id { get; set; }
 
-
         public Guid RoleId { get; set; }
 
         public string FunctionId { get; set; }
